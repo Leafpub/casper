@@ -3,15 +3,21 @@
     <a href="#" class="nav-close">
         <span class="hidden">Close</span>
     </a>
+
+    <div class="nav-search">
+        <form action="{{search_url}}" method="get" autocomplete="off">
+            <input type="search" name="s" placeholder="Search">
+        </form>
+    </div>
+
+    {{#navigation}}
     <ul>
-        {{#foreach navigation}}
-            <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
-        {{/foreach}}
+        {{#each items}}
+        <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a href="{{url link}}">{{label}}</a></li>
+        {{/each}}
     </ul>
-    {{#if @labs.subscribers}}
-        <a class="subscribe-button" href="{{@blog.url}}/subscribe/">Subscribe</a>
-    {{else}}
-        <a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/">Subscribe</a>
-    {{/if}}
+    {{/navigation}}
+
+    <a class="subscribe-button icon-feed" href="{{feed_url}}">Subscribe</a>
 </div>
 <span class="nav-cover"></span>
