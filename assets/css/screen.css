@@ -1182,18 +1182,9 @@ body:not(.post-template, .page-template) .post-title {
    text column to break out. */
 .post-content img {
     display: block;
-    max-width: 126%;
+    max-width: 100%;
     height: auto;
     padding: 0.6em 0;
-    /* Centers an image by (1) pushing its left edge to the
-       center of its container and (2) shifting the entire image
-       in the opposite direction by half its own width.
-       Works for images that are larger than their containers. */
-    position: relative;
-    left: 50%;
-    -webkit-transform: translateX(-50%); /* for Safari and iOS */
-    -ms-transform: translateX(-50%); /* for IE9 */
-    transform: translateX(-50%);
 }
 
 .footnotes {
@@ -2244,8 +2235,8 @@ body:not(.homepage) .extra-pagination {
 
 
 /* ==========================================================================
-   Mandatory editor classes for alignment. We need these because the editor
-   generates classes instead of inline styles for text/image alignment.
+    Required classes for alignment. We need these because Postleaf generates
+    classes instead of inline styles for alignment.
    ========================================================================== */
 
 .align-left {
@@ -2281,4 +2272,23 @@ img.align-right,
 [data-embed].align-right {
    float: right;
    margin-left: 1em;
+}
+
+/* Let centered images extend outside of the post content */
+img.align-center {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 126%;
+    height: auto;
+    padding: 0.6em 0;
+    /* Centers an image by (1) pushing its left edge to the
+       center of its container and (2) shifting the entire image
+       in the opposite direction by half its own width.
+       Works for images that are larger than their containers. */
+    position: relative;
+    left: 50%;
+    -webkit-transform: translateX(-50%); /* for Safari and iOS */
+    -ms-transform: translateX(-50%); /* for IE9 */
+    transform: translateX(-50%);
 }
