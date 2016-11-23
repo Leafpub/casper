@@ -1,6 +1,6 @@
 # Casper
 
-The default theme for [Ghost](http://github.com/tryghost/ghost/), forked for [Postleaf](https://www.postleaf.org).
+The default theme for [Ghost](http://github.com/tryghost/ghost/), forked for [Leafpub](https://www.leafpub.org).
 
 ## Copyright & License
 
