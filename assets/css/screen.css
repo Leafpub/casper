@@ -2235,7 +2235,7 @@ body:not(.homepage) .extra-pagination {
 
 
 /* ==========================================================================
-    Required classes for alignment. We need these because Postleaf generates
+    Required classes for alignment. We need these because Leafpub generates
     classes instead of inline styles for alignment.
    ========================================================================== */
 
@@ -2291,4 +2291,16 @@ img.align-center {
     -webkit-transform: translateX(-50%); /* for Safari and iOS */
     -ms-transform: translateX(-50%); /* for IE9 */
     transform: translateX(-50%);
+}
+
+/* ==========================================================================
+  Customize editable guidelines.
+  ========================================================================== */
+
+body .has-cover [data-leafpub-id="post:title"]:hover {
+    outline-color: rgba(255, 255, 255, .5);
+}
+
+body .has-cover [data-leafpub-id="post:title"]:focus {
+    outline-color: white;
 }
